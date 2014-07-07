@@ -3,21 +3,30 @@
 
 (function () {
     describe('Calculator', function () {
-        describe('should add', function () {
-						
-            it('two strings', function () {
-			
-			var string1= "1";
-			var string2= "2";
-			
-			var calculator = new Calculator();
-			
-			var result = calculator.Add(string1, string2);
-		
-			expect(result).toEqual(3);
-			
-            });
-												 
+        describe('should ', function () {
+        	it(' return zero for empty string ', function (string) {
+
+        	var	string = "";
+
+        	var calculator = new Calculator();
+
+        	var answer = calculator.Add(string)
+        	
+        	expect(answer).toEqual(0);
+
+        	});
+        	
+        	it('return number for one string', function (string) {
+
+        		var string = "1";
+
+        		var calculator = new Calculator();
+        		
+        		var answer = calculator.Add(string);
+
+        		expect(answer).toEqual(1);
+        	});
+            												 
         });
     });
 })();
